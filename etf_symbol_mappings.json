@@ -1,0 +1,15 @@
+{
+  "mappings": {
+    "KOTAKGOLD": "GOLD1"
+  },
+  "last_updated": "2025-07-20T22:05:27.309421",
+  "version": "1.0",
+  "mapping_history": [
+    {
+      "old_symbol": "KOTAKGOLD",
+      "new_symbol": "GOLD1",
+      "date": "2025-07-20T22:05:27.309419",
+      "reason": "ETF renamed by fund house"
+    }
+  ]
+}

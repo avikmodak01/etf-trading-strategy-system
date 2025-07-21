@@ -1,0 +1,14 @@
+{
+  "etfs": {
+    "SAMPLE_ETF": {
+      "name": "SAMPLE_ETF",
+      "cmp": 100.00,
+      "dma_20": 98.50,
+      "last_price_update": "2025-01-01T10:00:00.000000",
+      "deviation_percent": 1.52
+    }
+  },
+  "portfolio": [],
+  "transactions": [],
+  "last_updated": null
+}
