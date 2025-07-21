@@ -2,6 +2,28 @@
 
 An automated ETF (Exchange-Traded Fund) trading strategy system that implements a systematic approach based on ETF rankings, moving averages, and profit/loss management.
 
+## ✨ Key Features
+
+### 💰 **Investment Management**
+- **Investment Amount-Based Trading**: Specify investment amount, get optimal quantity suggestions
+- **Smart Quantity Calculation**: Price buffers, utilization analysis, and validation
+- **Multiple Investment Strategies**: Conservative (₹5K), Balanced (₹10K), Aggressive (₹25K)
+- **Investment Efficiency Tracking**: Monitor capital deployment effectiveness
+
+### 🛡️ **Volume Filtering**
+- **Liquidity Assurance**: Only trade ETFs with sufficient daily volume (default: >50,000)
+- **5-Day Average Volume**: Stable volume assessment for consistent liquidity
+- **Configurable Thresholds**: Adjust based on risk preference and portfolio size
+
+### 📊 **Live Data Integration**
+- **Yahoo Finance Integration**: Real-time price and volume data
+- **20-Day Moving Average**: Automatic calculation from historical data
+- **Rate Limiting**: Intelligent API call management
+
+### 🖥️ **Enhanced Interfaces**
+- **Enhanced CLI**: 22 menu options with investment guidance
+- **Telegram Bot**: Interactive workflows with investment prompts
+
 ## 🎯 Strategy Overview
 
 This system implements a disciplined ETF trading strategy with the following rules:
@@ -31,18 +53,24 @@ python3 setup.py
 source etf_trading_env/bin/activate
 ```
 
-### 2. Start with Command Line Interface
+### 2. Start with Enhanced Command Line Interface
 ```bash
-python3 etf_cli.py
+python3 enhanced_cli.py
 ```
 
-### 3. Load Sample Data (for testing)
-- Choose option 8 in the CLI menu
-- This loads sample ETF price data to test the system
+### 3. Configure Investment Settings
+- Choose option 21: Configure Investment Capital
+- Set your default investment amount (₹10,000 recommended)
+- Choose strategy: Conservative/Balanced/Aggressive
 
-### 4. Get Daily Recommendations
-- Choose option 1 to see buy/sell recommendations
-- Follow the strategy suggestions
+### 4. Update ETF Data and Enable Volume Filtering
+- Choose option 14: Update ETF Volume Status
+- Choose option 17: Toggle Volume Filtering → Enable
+- Choose option 6: Load ETF list from Excel
+
+### 5. Get Daily Recommendations
+- Choose option 1: Get Daily Strategy Recommendations
+- Follow the investment-guided buy/sell suggestions
 
 ## 📱 Telegram Bot Setup
 
@@ -79,8 +107,11 @@ python3 telegram_bot.py
 ### Core Files
 - **`etf_data_manager.py`**: Data storage and portfolio management
 - **`trading_strategy.py`**: Strategy logic and recommendations
-- **`etf_cli.py`**: Command line interface
-- **`telegram_bot.py`**: Telegram bot interface
+- **`enhanced_cli.py`**: Enhanced command line interface (22 menu options)
+- **`investment_manager.py`**: Investment amount calculations and strategies
+- **`volume_filter.py`**: Volume-based ETF qualification system
+- **`price_fetcher.py`**: Live price fetching from Yahoo Finance
+- **`telegram_bot.py`**: Telegram bot interface with investment prompts
 - **`etf-list.xlsx`**: List of ETFs to track
 
 ### Data Storage
@@ -91,13 +122,17 @@ python3 telegram_bot.py
 
 ## 💼 Usage Examples
 
-### Command Line Interface
+### Enhanced Command Line Interface
 ```bash
-# Get daily recommendations
-python3 etf_cli.py
-# Choose option 1
+# Get daily recommendations with investment guidance
+python3 enhanced_cli.py
+# Choose option 1: Get Daily Strategy Recommendations
 
-# Update ETF prices
+# Configure investment settings
+python3 enhanced_cli.py
+# Choose option 21: Configure Investment Capital
+
+# Update ETF prices and volume data
 # Choose option 2, then enter:
 GOLDBEES,45.50,44.20
 KOTAKGOLD,12.30,12.10
